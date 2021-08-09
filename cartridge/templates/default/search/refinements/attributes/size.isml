@@ -9,7 +9,7 @@
         </isif>
 
         <span aria-hidden="true" class="${refinementValue.swatchId}<isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif>">
-            ${refinementValue.displayValue} ${!pdict.isMobile ? '(' + refinementValue.hitCount + ')' : ''}
+            ${refinementValue.displayValue} ${!(request.httpHeaders.get('user-agent').indexOf('Mobile') + 1) ? '(' + refinementValue.hitCount + ')' : ''}
         </span>
 
         <span class="sr-only selected-assistive-text">

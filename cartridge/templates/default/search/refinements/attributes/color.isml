@@ -1,6 +1,6 @@
 <li class="color-attribute ${!refinementValue.selectable ? 'disabled' : ''}">
     <button data-href="${refinementValue.url}">
-    	<isif condition=${!pdict.isMobile}>
+    	<isif condition="${!(request.httpHeaders.get('user-agent').indexOf('Mobile') + 1)}">
 	        ${refinementValue.displayValue} (${refinementValue.hitCount})
 	    <iselse>
 	    	<span class="${refinementValue.swatchId} swatch-circlecolor-value  swatch-mark
