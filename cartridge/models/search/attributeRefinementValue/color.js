@@ -73,7 +73,8 @@ function ColorRefinementValueWrapper(productSearch, refinementDefinition, refine
         'selectable',
         'swatchId',
         'title',
-        'url'
+        'url',
+        'hitCount'
     ];
     items.forEach(function (item) {
         this[item] = value[item];
