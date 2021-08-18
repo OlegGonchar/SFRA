@@ -1,6 +1,7 @@
 
 module.exports = {
     isMobile: function(userAgent) {
+        userAgent = userAgent || request.httpHeaders.get('user-agent');
         var isMobile = false;
 
 		if (!empty(userAgent)) {
