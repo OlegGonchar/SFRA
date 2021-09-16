@@ -1,8 +1,8 @@
-<isset name="daysToExpire" value=${require('app_onboarding/cartridge/utils/wishlistUtils').daysBeforeExpiration(item)} scope="page" />
+
 <p class="line-item-attributes">
-    <isif condition="${daysToExpire === 1}">
+    <isif condition="${+item.daysToExpire === 1}">
         ${Resource.msgf('expiration.tomorrow.message', 'mywishlist', null)}
     <iselse>
-        ${Resource.msgf('expiration.message', 'mywishlist', null, daysToExpire)}
+        ${Resource.msgf('expiration.message', 'mywishlist', null, item.daysToExpire)}
     </isif>
 </p>
