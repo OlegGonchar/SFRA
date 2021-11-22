@@ -1,0 +1,3 @@
+<div class='line-item-name'>
+    ${(pdict.wishlist.items.length).toFixed(0)} ${Resource.msgf('products', 'mywishlist', null)}
+</div>

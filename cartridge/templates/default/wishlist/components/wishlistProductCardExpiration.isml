@@ -1,0 +1,8 @@
+
+<p class="line-item-attributes">
+    <isif condition="${+item.daysToExpire === 1}">
+        ${Resource.msgf('expiration.tomorrow.message', 'mywishlist', null)}
+    <iselse>
+        ${Resource.msgf('expiration.message', 'mywishlist', null, item.daysToExpire)}
+    </isif>
+</p>
